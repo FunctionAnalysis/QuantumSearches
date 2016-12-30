@@ -1,0 +1,66 @@
+//First Grouping - Qbits (0,1,2)//
+
+h q[0];                         // Hadamard Gate //
+h q[1];                         // Hadamard Gate //
+x q[2];                         // Pauli operator Bit Flip //
+s q[0];                         // Phase Gate //
+
+//Second Grouping - Qbits (3,2,1,0)//
+
+cx q[1], q[2];                  // C-NOT Bit Flip with Phase Gate //
+t q[3];                         // T-Gate (Non-Clifford) //
+
+//Third Grouping - Qbits (3,2,1,0)//
+
+cx q[0], q[2];                  // C-NOT Bit Flip //
+s q[3];                         // Phase Gate //
+
+//Fourth Grouping - Qbits (3,2,1,0)//
+
+x q[0];                         // Bit Flip //
+z q[1];                         // Phase Flip //
+s q[2];                         // Phase Gate //
+tdg q[3];                       // Inverse T-Gate //
+
+//Fifth Grouping - Qbits (3,2,1,0)
+cx q[0], q[2];                  // Bit Flip //
+id q[3];                        // ID Gate //
+
+//Sixth Grouping - Qbits (2,1)
+cx q[1], q[2];                  // C-NOT w.r.t X //
+
+//Seventh Grouping - Qbits (2,1,0)
+h q[0];                         // Hadamard Gate //
+h q[1];                         // Hadamard Gate //
+h q[2];                         // Hadamard Gate //
+
+//Eighth Grouping - Qbits (2,1,0)
+x q[0];                         // Bit Flip //
+x q[1];                         // Bit Flip //
+x q[2];                         // Bit Flip //
+
+//Ninth Grouping - Qbits (2,1,0)
+cx q[0], q[2];                  // C-NOT Bit Flip //
+
+//Tenth Grouping - Qbits (2,1,0)
+h q[0];                         // Hadamard Gate //
+cx q[1], q[2];                  //C-NOT Bit Flip //
+
+//Eleventh Grouping - Qbits (2)
+s q[2];                         // Phase Gate //
+
+//Twelfth Grouping - Qbits (2)
+h q[2];                         // Hadamard Gate //
+
+//Thirteenth Grouping - Qbits (2)
+tdg q[2];                       // T-Gate Inverse //
+
+//Fourteenth Grouping - Qbits (2)
+h q[2];                         // Hadamard Gate //
+
+//Standard Measurement "Z-Projection" - Qbits (4,3,2,1,0)
+measure q[0];
+measure q[1];
+measure q[2];
+measure q[3];
+measure q[4];
