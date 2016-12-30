@@ -1,3 +1,6 @@
+QASM Code
+Written by: Ian Malloy
+
 x q[1];
 x q[2];
 cx q[1], q[2];
