@@ -1,3 +1,5 @@
+Copyright: Ian Malloy, 2016
+
 //First Grouping - Qbits (0,1,2)//
 
 h q[0];                         // Hadamard Gate //
